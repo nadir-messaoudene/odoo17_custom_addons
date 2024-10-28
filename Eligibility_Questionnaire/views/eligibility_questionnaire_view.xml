@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="eligibility_form_page" name="Eligibility Form Page">
+            <t t-call="website.layout">
+                <div class="container">
+                    <h1>Vérification d'Éligibilité</h1>
+                    <form action="/eligibility/check" method="post" id="eligibility-form">
+                        <div class="form-group">
+                            <label for="age">Âge :</label>
+                            <input type="number" id="age" name="age" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="residence">Résidence (pays) :</label>
+                            <input type="text" id="residence" name="residence" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="income">Revenu annuel (en €) :</label>
+                            <input type="number" id="income" name="income" required="required"/>
+                        </div>
+                        <button type="submit">Vérifier l'Éligibilité</button>
+                    </form>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

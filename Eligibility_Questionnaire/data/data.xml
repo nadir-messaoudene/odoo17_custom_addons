@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="menu_eligibility" model="website.menu">
+            <field name="name">Eligibility</field>
+            <field name="parent_id" search="[
+        ('url', '=', '/default-main-menu'),
+        ('website_id', '=', 1)]"/>
+            <field name="website_id">1</field>
+            <field name="sequence" type="int">10</field>
+        </record>
+
+        <record id="menu_services_item_1" model="website.menu">
+            <field name="name">Check</field>
+            <field name="url">/eligibility</field>
+            <field name="website_id">1</field>
+            <field name="parent_id" ref="Eligibility_Questionnaire.menu_eligibility"/>
+            <field name="sequence" type="int">30</field>
+        </record>
+    </data>
+</odoo>
